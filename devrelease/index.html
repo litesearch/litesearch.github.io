@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search The Web With Lite Search | Lite Search The Private & Fast Search Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ext.png" type="image/png">
+</head>
+<body>
+    <div id="pkg">
+        <h1 style="display: flex;align-items: center;">
+            Lite Search <div style="background-image: url('ext.png');height: 50px;width: 50px;background-size: cover;"></div>
+        </h1>
+    </div>
+    <center>
+        <input id="search-queery" type="text" name="text" placeholder="Search The Web">
+        <button id="search-btn"></button>
+    </center>
+</body>
+<script src="main.js"></script>
+<script>
+    document.getElementById("search-queery").addEventListener('click', ()=>{
+        window.open('search', '_parent');
+    });
+</script>
+</html>

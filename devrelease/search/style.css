@@ -1,0 +1,111 @@
+#pkg{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+body{
+    font-family: Arial;
+    color: rgb(48, 48, 48);
+    background-color: whitesmoke;
+}
+
+::selection{
+    background-color: rgba(0, 94, 255, 0.104);
+    border: 1px solid rgba(0, 94, 255, 0.367);
+}
+
+#search-queery{
+    width: 55%;
+    background-color: white;
+    border: 2px solid silver;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .5s;
+    outline: none;
+}
+#search-queery:hover{
+    border: 2.5px solid dodgerblue;
+}
+#search-queery:focus{
+    border: 2.5px solid dodgerblue;
+    outline: 3.5px solid skyblue;
+}
+#search-btn{
+    background: url('/ser.png');
+    height: 30px;
+    width: 40px;
+    background-size: cover;
+    border: 0px;
+    filter: saturate(0%);
+    outline: none;
+    transition: .5s;
+    margin-left: 10px;
+}
+#search-btn:hover{
+    filter: saturate(100%);
+}
+#search-btn:focus{
+    filter: saturate(100%);
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+}
+
+
+#features{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#features button{
+    margin-left: 15px;
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    height: 40px;
+    width: 100px;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.websites{
+    background-color: white;
+    border: 0px;
+    width: 95%;
+    max-height: 170px;
+    overflow: hidden;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+    border: 2px solid whitesmoke;
+    padding: 20px;
+}
+
+.websites .title{
+    color: dodgerblue;
+    font-weight: normal;
+    font-size: 25px;
+    margin: 0px;
+}
+
+.websites .url{
+    color: rgb(29, 187, 29);
+    font-weight: normal;
+    margin-top: 10px;
+    height: 16px;
+    display: flex;
+    overflow: hidden;
+}

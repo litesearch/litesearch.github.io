@@ -1,0 +1,7 @@
+{
+    "https://www.example.com" : {
+        "title" : "Example Website",
+        "description" : "This is a example website",
+        "favicon" : "ext.png"
+    }
+}
