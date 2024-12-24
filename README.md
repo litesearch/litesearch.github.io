@@ -21,7 +21,7 @@ A Lightweight Search Engine Written With C++ , JavaScript, Html and Css. Provide
 The LiteSearch Engine is licensed under the MIT License and can be used perfectly unless License Terms Are Voilated.
 
 ## 🤝🏻Contributions
-The LiteSearch Engine accepts Contributions of everyone no matters what level of coding you owns make sure to checkout the (CONTRIBUTING.md)[CONTRIBUTING.md] file for full information about contributions.
+The LiteSearch Engine accepts Contributions of everyone no matters what level of coding you owns make sure to checkout the (CONTRIBUTING.md)[https://github.com/litesearch/litesearch.github.io/CONTRIBUTING.md] file for full information about contributions.
 
 ## 🌓Repo Channels
 LiteSearch has 2 channels for providing search facility.
