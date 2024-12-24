@@ -18,11 +18,6 @@
         </nav>
     </div>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
     <div id="features">
         <button data-ripple-color="rgba(0, 94, 255, 0.104)">Sites</button>
@@ -31,23 +26,38 @@
     </div>
     <br>
     <br>
+    <center>
+    <iframe src="libweb.json" style="display: none;" frameborder="0" id="wfetch"></iframe>
+    <!-- The Dataset loader will crawl the websites and add them right here -->
     <div id="results">
-        <button class="websites">
-            <h2 class="title">
-                Title
-            </h2>
-            <h4 class="url">
-                https://mydomain.com/search?q=hello world 2024+ Stuff like that
-            </h4>
-            <p class="description">
-                This is the description
-                This is the description
-                This is the description
-                This is the description
-                This is the description
-            </p>
-        </button>
+        
     </div>
+    </center>
 </body>
+<!-- Don't change the order of includes! -->
+<script src="dataset_api.js"></script>
+<script src="dataset.js"></script>
 <script src="ripple.lib.js"></script>
+<script>
+    // Search Algorithm Is Right Here
+    var total_websites = document.querySelectorAll('.websites');
+    var search_queery = document.getElementById('search-queery');
+    var search_btn = document.getElementById('search-btn');
+
+    search_btn.addEventListener('click', ()=>{
+        var results_length = 0;
+        for (var i = 0;i < total_websites.length;i++){
+            if (!search_queery.value.includes(' ') && (search_queery.value.includes('https://') || search_queery.value.includes("http://")) && search_queery.value.includes(".")){
+                window.open(search_queery.value);
+            }
+            if (total_websites[i].innerHTML.toLocaleLowerCase().includes(search_queery.value.toLocaleLowerCase())){
+                results_length += 1;
+                total_websites[i].style.display = 'block';
+            }
+            else {
+                total_websites[i].style.display = 'none';
+            }
+        }
+    })
+</script>
 </html>
