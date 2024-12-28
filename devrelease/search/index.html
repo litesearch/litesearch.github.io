@@ -40,24 +40,76 @@
 <script src="ripple.lib.js"></script>
 <script>
     // Search Algorithm Is Right Here
-    var total_websites = document.querySelectorAll('.websites');
+    // var total_websites = document.querySelectorAll('.websites');
     var search_queery = document.getElementById('search-queery');
     var search_btn = document.getElementById('search-btn');
-
+    console.log(dataset_websites)
+    var current_reach = 0; // decide where to start swearches from
     search_btn.addEventListener('click', ()=>{
+        current_reach = 0;
+        clear_Exports();
+        var loop_run = 0;
         var results_length = 0;
-        for (var i = 0;i < total_websites.length;i++){
+        for (var i = current_reach;i < dataset_websites.length;i++){
+            // console.log("searching on : " + i + " , With web : " + dataset_websites[i])
+            if (loop_run === 6){
+                break;
+            }
             if (!search_queery.value.includes(' ') && (search_queery.value.includes('https://') || search_queery.value.includes("http://")) && search_queery.value.includes(".")){
                 window.open(search_queery.value);
             }
-            if (total_websites[i].innerHTML.toLocaleLowerCase().includes(search_queery.value.toLocaleLowerCase())){
+            if (dataset_websites[current_reach].toLocaleLowerCase().includes(search_queery.value.toLocaleLowerCase())){
                 results_length += 1;
-                total_websites[i].style.display = 'block';
+                // dataset_websites[i].style.display = 'block';
+                export_Website(dataset_websites[current_reach])
+                loop_run += 1;
             }
             else {
-                total_websites[i].style.display = 'none';
+                // dataset_websites[i].style.display = 'none';
             }
+            current_reach = i;
+
+            // console.log("current reach : " + i)
         }
+        export_Website('<button id="btn-sm" onclick="search_more()" data-ripple-color="rgba(0, 0, 0, 0.1)">Search More</button>');
+        GTG_applyRippleEffect('button', 'rgba(0, 0, 0, 0.2)');
     })
+
+
+    function search_more(){
+        // clear_Exports();
+        document.getElementById('btn-sm').remove();
+        var loop_run = 0;
+        var results_length = 0;
+        for (var i = current_reach;i < dataset_websites.length;i++){
+            // console.log("searching on : " + i + " , With web : " + dataset_websites[i])
+            if (loop_run === 6){
+                break;
+            }
+            if (!search_queery.value.includes(' ') && (search_queery.value.includes('https://') || search_queery.value.includes("http://")) && search_queery.value.includes(".")){
+                window.open(search_queery.value);
+            }
+            if (dataset_websites[current_reach].toLocaleLowerCase().includes(search_queery.value.toLocaleLowerCase())){
+                results_length += 1;
+                // dataset_websites[i].style.display = 'block';
+                export_Website(dataset_websites[current_reach])
+                loop_run += 1;
+            }
+            else {
+                // dataset_websites[i].style.display = 'none';
+            }
+
+            if (current_reach+1 == dataset_websites.length){
+                console.warn("max dataset reached!");
+                break;
+            }
+            current_reach = i;
+
+            // console.log("current reach : " + i)
+        }
+        export_Website('<button id="btn-sm" onclick="search_more()" data-ripple-color="rgba(0, 0, 0, 0.1)">Search More</button>');
+        GTG_applyRippleEffect('button', 'rgba(0, 0, 0, 0.2)');
+
+    }
 </script>
 </html>

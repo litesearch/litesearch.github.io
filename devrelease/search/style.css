@@ -109,3 +109,59 @@ nav{
     display: flex;
     overflow: hidden;
 }
+
+
+
+#btn-sm{
+    background-color: rgb(232, 232, 232);
+    color: #1c1c1c;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    width: 50%;
+    font-weight: 500;
+    margin: 20px;
+}
+
+
+.card{
+    background-color: white;
+    color: #1C1C1C;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .1);
+    padding: 30px;
+    width: 80%;
+    text-align: left;
+}
+
+.card *{
+    font-weight: normal;
+    margin: 10px;
+}
+
+
+.code {
+    background-color: rgb(226, 236, 237);
+    margin: 1px;
+    padding: 0px;
+    font-family: monospace;
+}
+
+
+.link{
+    color: dodgerblue;
+    background-color: transparent;
+    border: transparent;
+    height: fit-content;
+    width: fit-content;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.link img{
+    width: 15px;
+}

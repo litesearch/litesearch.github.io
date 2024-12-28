@@ -1,5 +1,5 @@
 // API For Creating DataSets
-function dataset_Import(title, url, description){
+function dataset_Export(title, url, description){
     document.getElementById('results').innerHTML += `<button class="websites">
             <h2 class="title">
                 ${title}
@@ -11,4 +11,12 @@ function dataset_Import(title, url, description){
                 ${description}
             </p>
         </button><br><br>`;
+}
+
+function export_Website(content){
+    document.getElementById('results').innerHTML += content;
+}
+
+function clear_Exports(){
+    document.getElementById('results').innerHTML = '';
 }
